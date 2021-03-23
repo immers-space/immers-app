@@ -1,0 +1,32 @@
+#!/bin/sh
+if [ -f "./.env" ]; then
+  echo ".env file already exists. Exiting to avoid changing secrets. Edit the file directly instead."
+  exit 1
+fi
+echo 'Creating .env settings file'
+cat ./.env.defaults > ./.env
+echo 'Generating secret keys (may take a moment)'
+sessionSecret=$(head -c 35 /dev/random | base64)
+easySecret=$(head -c 35 /dev/random | base64)
+sed -Ei "s|(sessionSecret=).*|\1$sessionSecret|" ./.env
+sed -Ei "s|(easySecret=).*|\1$easySecret|" ./.env
+echo 'Please answer the following prompts to configure your immer.\nVisit https://github.com/immers-space/immers-app for more info.'
+read -p 'Name of your immer (e.g. Immers Space): ' immerName
+sed -Ei "s|(name=).*|\1$immerName|" ./.env
+read -p 'Base domain for your immer (e.g. immers.space): ' domain
+sed -Ei "s|(domain=).*|\1$domain|" ./.env
+read -p 'Domain for your Mozilla Hubs Cloud or other immersive experience (e.g. hub.immers.space): ' hub
+sed -Ei "s|(hub=).*|\1$hub|" ./.env
+read -p 'Domain for your smtp email service: ' smptHost
+sed -Ei "s|(smptHost=).*|\1$smptHost|" ./.env
+read -p 'Port for your smtp email service (default 587): ' smptPort
+[ -z "$smptPort" ] || sed -Ei "s|(smptPort=).*|\1$smptPort|" ./.env
+read -p 'Username for your smtp email service: ' smtpUser
+sed -Ei "s|(smtpUser=).*|\1$smtpUser|" ./.env
+read -p 'Password for your smtp email service: ' smtpPassword
+sed -Ei "s|(smtpPassword=).*|\1$smtpPassword|" ./.env
+sed -Ei "s|(smtpFrom=noreply@mail\.).*|\1$domain|" ./.env
+read -p 'Your Web Monetization pointer (optional): ' monetizationPointer
+[ -z "$monetizationPointer" ] || sed -Ei "s|(monetizationPointer=).*|\1$monetizationPointer|" ./.env
+echo 'Your immer is configured. Additional options are available by editing the .env file. It is a good idea download a backup copy of this file.'
+echo 'Start your immer with the command "docker-compose up"'

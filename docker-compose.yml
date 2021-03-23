@@ -1,0 +1,21 @@
+version: "3.8"
+
+services:
+  immer:
+    image: immersspace/immers:latest
+    restart: unless-stopped
+    ports:
+      - 443:8081
+      - 80:80
+    env_file: '.env'
+    depends_on:
+      - mongodb
+    
+  mongodb:
+    image: mongo:4.2
+    restart: unless-stopped
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
