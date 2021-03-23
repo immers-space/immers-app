@@ -8,6 +8,8 @@ services:
       - 443:8081
       - 80:80
     env_file: '.env'
+    environment:
+      NODE_ENV: 'production'
     depends_on:
       - mongodb
     

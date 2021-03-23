@@ -40,6 +40,7 @@ That's it! Your immer is running.
 If you haven't already done so, make sure to update your domain provider
 to point your domain to the ip address of your new server and then visit
 `yourdomain.com/auth/login` to confirm you see your login page.
+The first time you load, it will take longer as it sets up your security certificate (you can watch it happening in real time with `docker-compose logs -f`)
 
 ## Using with Mozilla Hubs Cloud
 
@@ -60,4 +61,4 @@ Attempts to navigate to the main domain will be redirected to the hub homepage a
   * Extra Content Security Policy connect-src Rules: `https: wss:`
   (allows API and streaming connections to remote users home instances)
   * Allowed CORS origins: `*`
-  (temporary measure cross-hub for avatar sharing)
+  (for cross-hub for avatar sharing)

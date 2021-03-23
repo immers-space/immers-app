@@ -5,7 +5,7 @@ if [ -f "./.env" ]; then
 fi
 echo 'Creating .env settings file'
 cat ./.env.defaults > ./.env
-echo 'Generating secret keys (may take a moment)'
+echo 'Generating secret keys.'
 sessionSecret=$(openssl rand -base64 32)
 easySecret=$(openssl rand -base64 32)
 sed -Ei "s|(sessionSecret=).*|\1$sessionSecret|" ./.env
@@ -29,4 +29,4 @@ sed -Ei "s|(smtpFrom=noreply@mail\.).*|\1$domain|" ./.env
 read -p 'Your Web Monetization pointer (optional): ' monetizationPointer
 [ -z "$monetizationPointer" ] || sed -Ei "s|(monetizationPointer=).*|\1$monetizationPointer|" ./.env
 echo 'Your immer is configured. Additional options are available by editing the .env file. It is a good idea download a backup copy of this file.'
-echo 'Start your immer with the command "docker-compose up"'
+echo 'Start your immer with the command "docker-compose up -d"'
