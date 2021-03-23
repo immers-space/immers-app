@@ -6,8 +6,8 @@ fi
 echo 'Creating .env settings file'
 cat ./.env.defaults > ./.env
 echo 'Generating secret keys (may take a moment)'
-sessionSecret=$(head -c 35 /dev/random | base64)
-easySecret=$(head -c 35 /dev/random | base64)
+sessionSecret=$(openssl rand -base64 32)
+easySecret=$(openssl rand -base64 32)
 sed -Ei "s|(sessionSecret=).*|\1$sessionSecret|" ./.env
 sed -Ei "s|(easySecret=).*|\1$easySecret|" ./.env
 echo 'Please answer the following prompts to configure your immer.\nVisit https://github.com/immers-space/immers-app for more info.'
