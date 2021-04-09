@@ -28,7 +28,7 @@ read -p 'Password for your smtp email service: ' smtpPassword
 sed -Ei "s|(smtpPassword=).*|\1$smtpPassword|" ./.env
 sed -Ei "s|(smtpFrom=noreply@mail\.).*|\1$domain|" ./.env
 read -p 'Your Web Monetization pointer (optional): ' monetizationPointer
-[ -z "$monetizationPointer" ] || sed -Ei "s|(monetizationPointer=).*|\1$monetizationPointer|" ./.env
+[ -z "$monetizationPointer" ] || sed -Ei "s|(monetizationPointer=).*|\1'$monetizationPointer'|" ./.env
 # create host directory for static theme files
 mkdir -p ~/immers
 echo 'Your immer is configured. Additional options are available by editing the .env file. It is a good idea download a backup copy of this file.'
