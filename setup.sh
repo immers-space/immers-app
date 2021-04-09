@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 if [ -f "./.env" ]; then
   echo ".env file already exists. Exiting to avoid changing secrets. Edit the file directly instead."
   exit 1
