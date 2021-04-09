@@ -10,12 +10,13 @@ sessionSecret=$(openssl rand -base64 32)
 easySecret=$(openssl rand -base64 32)
 sed -Ei "s|(sessionSecret=).*|\1$sessionSecret|" ./.env
 sed -Ei "s|(easySecret=).*|\1$easySecret|" ./.env
-echo 'Please answer the following prompts to configure your immer.\nVisit https://github.com/immers-space/immers-app for more info.'
+echo 'Please answer the following prompts to configure your immer.'
+echo 'Visit https://github.com/immers-space/immers-app for more info.'
 read -p 'Name of your immer (e.g. Immers Space): ' immerName
 sed -Ei "s|(name=).*|\1$immerName|" ./.env
 read -p 'Base domain for your immer (e.g. immers.space): ' domain
 sed -Ei "s|(domain=).*|\1$domain|" ./.env
-read -p 'Domain for your Mozilla Hubs Cloud or other immersive experience (e.g. hub.immers.space): ' hub
+read -p 'Domain for your Immersive Web experience (e.g. hub.immers.space): ' hub
 sed -Ei "s|(hub=).*|\1$hub|" ./.env
 read -p 'Domain for your smtp email service: ' smptHost
 sed -Ei "s|(smptHost=).*|\1$smptHost|" ./.env
