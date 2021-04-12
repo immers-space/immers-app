@@ -58,8 +58,10 @@ Deploy your portal to the Immers Space metaverse and connect it to your Hubs Clo
 
 ### Step 0 - Server
 
-You'll need a server with Docker & Docker Compose installed. Your hosting provider might provide a ready-to-use image you can deploy ([Digital Ocean](https://marketplace.digitalocean.com/apps/docker), [AWS](https://aws.amazon.com/marketplace/pp/B08SHXDLL3?qid=1616591908920)), or you can [install Docker](https://docs.docker.com/get-docker/).
-Once your server is setup, connect to its command prompt over SSH before proceeding. 
+You'll need a server with at least 2GB RAM[¹](#footnotes), 20GB storage, and Docker Compose installed. Your hosting provider might provide a ready-to-use image you can deploy ([Digital Ocean](https://marketplace.digitalocean.com/apps/docker), [AWS](https://aws.amazon.com/marketplace/pp/B08SHXDLL3?qid=1616591908920)), or you can [install Docker](https://docs.docker.com/get-docker/).
+Your Immers Server does not need to be on the same hosting provider as your Hubs Cloud.
+Once your server is setup, point your main domain to the IP address of your new server (i.e. add a DNS "A" record, [Digital Ocean](https://docs.digitalocean.com/products/networking/dns/how-to/manage-records/), [AWS](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-ec2-instance.html))
+and connect to its command prompt over SSH before proceeding.
 
 ### Step 1 - Setup
 
@@ -78,11 +80,11 @@ It will prompt you to enter the necessary configuration details.
 ```
 
 You can find detailed descriptions of the configuration options and additional customization options
-[in the immers readme](https://github.com/immers-space/immers#configuration).
+[in the `immers` readme](https://github.com/immers-space/immers#configuration).
 To add static files such as a custom `backgroundImage`,
 place the files in `~/immers`
 and then edit the file name into the `.env` file
-(don't include a leading `/` or the immers folder name).
+(don't include a leading `/` or the `immers` folder name).
 
 ### Step 2 - Go
 
@@ -92,13 +94,12 @@ Start up the server
 docker-compose up -d
 ```
 
-This command will start up your immers server and connect to your Hubs Cloud and configure it to connect with your immers server.
-You can monitor the Hubs Cloud Setup progress with `docker-compose logs -f hubdeployer`
-- you must check your Hubs Cloud admin email and click the login link that arrives in order to authorize this process.
+This command will start up your Immers Server and connect to your Hubs Cloud and configure it to connect with your Immers Server.
+You can monitor the Hubs Cloud Setup progress with `docker-compose logs -f hubdeployer` (press CTRL+C to exit that view later)
 
-After that, you're done! Your immer is running. If you haven't already done so, make sure to update your domain provider
-to point your domain to the IP address of your new server (i.e. add an "A" record)
-and then visit your main domain after your domain provider has had time to update.
+\- You must check your Hubs Cloud admin email and click the login link that arrives in order to authorize this process.
+
+After that, you're done! Your Immer is running.
 After a short wait the first time your visit (setting up your security certificate),
 you'll be redirected to your Hubs Cloud homepage.
 
@@ -111,13 +112,18 @@ and using our fremium monetization features (coming soon - in the meantime try t
 
 ### Step 4 - Updates
 
-Log back into your server in the future to apply updates to the immers server or the
+Log back into your server in the future to apply updates to the Immers Server or the
 custom hubs client:
 
 ```
-cd immers-app/immers-hubs
+cd ~/immers-app/immers-hubs
+git pull
 ./update.sh
 ```
 
 This will check for updates, make a backup of your database, and,
-if necessary, update your immers server and/or your Hubs Cloud.
+if necessary, update your Immers Server and/or your Hubs Cloud.
+
+### Footnotes
+
+1. 2GB RAM is required for installs & updates, but, if you're on a budget, you may downsize your Immers Server to 1GB afterwards for routine usage

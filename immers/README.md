@@ -1,6 +1,6 @@
 # Standalone Immers Social Networking Server
 
-Deploy a standalone immers server that you will integrate with your own unique Immersive Web experience.
+Deploy a standalone Immers Server that you will integrate with your own unique Immersive Web experience.
 
 ## Who is this guide for?
 
@@ -12,10 +12,10 @@ Get your tools and services ready.
 
 ### Domains
 
-The immers server can share a domain with your existing site.
-For the best experience, put the immers server on the bare domain, as this becomes a part of usernames,
+The Immers Server can share a domain with your existing site.
+For the best experience, put the Immers Server on the bare domain, as this becomes a part of usernames,
 and put your web content on a subdomain.
-The immers server will redirect to your web content subdomain.
+The Immers Server will redirect to your web content subdomain.
 
 ### SMTP Email Provider
 
@@ -87,5 +87,6 @@ Coming soon...
 
 Updates are accomplished with `docker-compose pull`.
 The `update.sh` script will backup the db, pull, apply migrations, and restart the the server.
+Just make sure you `git pull` the latest version of this project first.
 
 Recover from a failed migration with `dbrestore.sh`
