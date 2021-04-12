@@ -15,4 +15,4 @@ There are two sets of tools and instructions here to choose from depending on yo
 
 ## I want to use Immers Space with Mozilla Hubs Cloud
 
-[Go to the immers-hubs folder for tools to deploy the immers server and inegrate with Hubs](./immers-hubs)
+[Go to the immers-hubs folder for tools to deploy the immers server and integrate with Hubs](./immers-hubs)
