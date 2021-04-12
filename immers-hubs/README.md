@@ -124,6 +124,13 @@ git pull
 This will check for updates, make a backup of your database, and,
 if necessary, update your Immers Server and/or your Hubs Cloud.
 
+If you make changes to your `.env` file settings after starting your Immers Server,
+you'll need to run the following command to make them take effect:
+
+```
+docker-compose up -d immer
+```
+
 ### Footnotes
 
 1. 2GB RAM is required for installs & updates, but, if you're on a budget, you may downsize your Immers Server to 1GB afterwards for routine usage

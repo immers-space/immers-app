@@ -90,3 +90,10 @@ The `update.sh` script will backup the db, pull, apply migrations, and restart t
 Just make sure you `git pull` the latest version of this project first.
 
 Recover from a failed migration with `dbrestore.sh`
+
+If you make changes to your `.env` file settings after starting your Immers Server,
+you'll need to run the following command to make them take effect:
+
+```
+docker-compose up -d immer
+```
