@@ -28,7 +28,7 @@ To help escape spam folders, follow your provider's instructions for domain veri
 ### Web Monetization Payment Pointer
 
 Earn money from your immer without including intrusive ads or
-compromosing user privacy using Web Monetization.
+compromising user privacy using Web Monetization.
 [Sign up for a free creator account at Coil.com](https://coil.com/creator)
 and follow the instructions there to setup
 a wallet and get a payment pointer.
