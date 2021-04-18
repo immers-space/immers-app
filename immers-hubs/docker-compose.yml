@@ -1,0 +1,30 @@
+version: "3.8"
+
+services:
+  hubdeployer:
+    image: immersspace/hubs:latest
+    env_file: '.env'
+    restart: "no"
+
+  immer:
+    image: immersspace/immers:latest
+    restart: unless-stopped
+    ports:
+      - 443:8081
+      - 80:80
+    env_file: '.env'
+    environment:
+      NODE_ENV: 'production'
+    depends_on:
+      - mongodb
+    volumes:
+      - ~/immers:/usr/src/immers/static-ext
+    
+  mongodb:
+    image: mongo:4.2
+    restart: unless-stopped
+    volumes:
+      - mongo-data:/data/db
+
+volumes:
+  mongo-data:
