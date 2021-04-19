@@ -133,4 +133,4 @@ docker-compose up -d immer
 
 ### Footnotes
 
-1. 2GB RAM is required for installs & updates, but, if you're on a budget, you may downsize your Immers Server to 1GB afterwards for routine usage
+1. Even 2GB RAM is cutting it close for installs & updates - 4GB is a safer bet if you can. Once the install is complete, you can downsize to a basic 1GB RAM server for routine usage 
