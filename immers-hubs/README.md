@@ -133,4 +133,4 @@ docker-compose up -d immer
 
 ### Footnotes
 
-1. Even 2GB RAM is cutting it close for installs & updates - 4GB is a safer bet if you can. Once the install is complete, you can downsize to a basic 1GB RAM server for routine usage 
+1. Even 2GB RAM is cutting it close for installs & updates - run after a fresh reboot or use a 4GB server size if you can. Once the install is complete, you can downsize to a basic 1GB RAM server for routine usage. **Note**: your hosting provider may not allow downsizing below the original server size. For budget hosting, create your server at the 1GB RAM level, temporarily upgrade it to 4GB for the install, and then downsize back to 1GB. We're working on reducing the installation memoty requirements to improve this.
