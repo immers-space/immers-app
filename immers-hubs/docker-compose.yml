@@ -5,10 +5,10 @@ services:
     image: immersspace/hubs:latest
     env_file: '.env'
     restart: "no"
-  logging:
-    driver: local
-    options:
-      max-size: '10m'
+    logging:
+      driver: local
+      options:
+        max-size: '10m'
 
   immer:
     image: immersspace/immers:latest
