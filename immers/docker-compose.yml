@@ -14,12 +14,20 @@ services:
       - mongodb
     volumes:
       - ~/immers:/usr/src/immers/static-ext
+    logging:
+      driver: local
+      options:
+        max-size: '10m'
     
   mongodb:
     image: mongo:4.2
     restart: unless-stopped
     volumes:
       - mongo-data:/data/db
+    logging:
+      driver: local
+      options:
+        max-size: '10m'
 
 volumes:
   mongo-data:
