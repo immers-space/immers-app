@@ -14,6 +14,7 @@ services:
       - mongodb
     volumes:
       - ~/immers:/usr/src/immers/static-ext
+      - certs:~/.small-tech.org/auto-encrypt/
     logging:
       driver: local
       options:
@@ -31,3 +32,4 @@ services:
 
 volumes:
   mongo-data:
+  certs:
