@@ -60,7 +60,7 @@ It will prompt you to enter the necessary configuration details.
 
 You can find detailed descriptions of the configuration options and additional customization options
 [in the immers readme](https://github.com/immers-space/immers#configuration).
-To add static files such as a custom `backgroundImage`,
+To add static files such as a custom `backgroundImage`, `icon`, or `welcome` message,
 place the files in `~/immers`
 and then edit the file name into the `.env` file
 (don't include a leading `/` or the immers folder name).
