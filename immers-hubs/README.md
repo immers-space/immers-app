@@ -106,9 +106,9 @@ you'll be redirected to your Hubs Cloud homepage.
 ### Step 3 - Content
 
 Your immer is now live! However, it's completely empty.
-Check out our guide on customizing your immer,
+Check out our [guide on customizing your immer,
 populating it with content,
-and using our fremium monetization features (coming soon - in the meantime try the [Hubs documentation](https://hubs.mozilla.com/docs/hubs-cloud-importing-content.html))
+and using our fremium monetization features](https://web.immers.space/2021/06/setting-up-your-mozilla-hubs-immers-space-metaverse-destination-with-premium-monetized-content/).
 
 ### Step 4 - Updates
 
