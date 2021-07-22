@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+set -e
 # backup database
 docker-compose exec -T mongodb sh -c 'mongodump --archive' > immersdb.dump
 

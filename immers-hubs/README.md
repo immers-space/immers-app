@@ -6,9 +6,9 @@ Tools to deploy your own Immers Space destination in the federated metaverse usi
 
 We want hosting an immer to be as accessible as possible,
 so we've made our best efforts to streamline this process.
-You don't need to be exerienced with system administration or
+You don't need to be experienced with system administration or
 programming follow this guide,
-but you should be a little adventerous and willing to search the web
+but you should be a little adventurous and willing to search the web
 or [ask us for help](https://github.com/immers-space/immers-app/issues/new) if you come across an instruction you're not familiar with.
 If you're comfortable with the command line and have setup your own
 website before, then this should be a breeze.
@@ -58,7 +58,7 @@ Deploy your portal to the Immers Space metaverse and connect it to your Hubs Clo
 
 ### Step 0 - Server
 
-You'll need a server with at least 2GB RAM[¹](#footnotes), 20GB storage, and Docker Compose installed. Your hosting provider might provide a ready-to-use image you can deploy ([Digital Ocean](https://marketplace.digitalocean.com/apps/docker), [AWS](https://aws.amazon.com/marketplace/pp/B08SHXDLL3?qid=1616591908920)), or you can [install Docker](https://docs.docker.com/get-docker/).
+You'll need a server with at least 1GB RAM, 20GB storage, and Docker Compose installed. Your hosting provider might provide a ready-to-use image you can deploy ([Digital Ocean](https://marketplace.digitalocean.com/apps/docker), [AWS](https://aws.amazon.com/marketplace/pp/B08SHXDLL3?qid=1616591908920)), or you can [install Docker](https://docs.docker.com/get-docker/).
 Your Immers Server does not need to be on the same hosting provider as your Hubs Cloud.
 Once your server is setup, point your main domain to the IP address of your new server (i.e. add a DNS "A" record, [Digital Ocean](https://docs.digitalocean.com/products/networking/dns/how-to/manage-records/), [AWS](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-ec2-instance.html))
 and connect to its command prompt over SSH before proceeding.
@@ -130,7 +130,3 @@ you'll need to run the following command to make them take effect:
 ```
 docker-compose up -d immer
 ```
-
-### Footnotes
-
-1. Even 2GB RAM is cutting it close for installs & updates - run after a fresh reboot or use a 4GB server size if you can. Once the install is complete, you can downsize to a basic 1GB RAM server for routine usage. **Note**: your hosting provider may not allow downsizing below the original server size. For budget hosting, create your server at the 1GB RAM level, temporarily upgrade it to 4GB for the install, and then downsize back to 1GB. We're working on reducing the installation memoty requirements to improve this.
