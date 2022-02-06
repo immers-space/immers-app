@@ -35,8 +35,6 @@ a wallet and get a payment pointer.
 
 ## Immers social networking server
 
-Deploy your portal to the Immers Space metaverse
-
 ### Step 0 - Server
 
 You'll need a server with Docker & Docker Compose installed. Your hosting provider might provide a ready-to-use image you can deploy ([Digital Ocean](https://marketplace.digitalocean.com/apps/docker), [AWS](https://aws.amazon.com/marketplace/pp/B08SHXDLL3?qid=1616591908920)), or you can [install Docker](https://docs.docker.com/get-docker/).
@@ -81,7 +79,13 @@ The first time you load, it will take longer as it sets up your security certifi
 
 ### Step 3 - Integrating Immers Space into your Immersive Web content
 
-Coming soon...
+With just one line of code, you can add a minimal HUD with Immers Login and profile status.
+
+```html
+<script type="module" src="https://unpkg.com/immers-client/dist/destination.bundle.js"></script>
+```
+
+Check out the [immers-client](https://github.com/immers-space/immers-client) library for more options.
 
 ### Step 4 - Updates
 
