@@ -37,7 +37,7 @@ a wallet and get a payment pointer.
 
 ### Step 0 - Server
 
-You'll need a server with Docker & Docker Compose installed. Your hosting provider might provide a ready-to-use image you can deploy ([Digital Ocean](https://marketplace.digitalocean.com/apps/docker), [AWS](https://aws.amazon.com/marketplace/pp/B08SHXDLL3?qid=1616591908920)), or you can [install Docker](https://docs.docker.com/get-docker/).
+You'll need a server with Docker & Docker Compose installed. Your hosting provider might provide a ready-to-use image you can deploy ([Digital Ocean](https://marketplace.digitalocean.com/apps/docker), [AWS](https://aws.amazon.com/marketplace/pp/prodview-vmbxxa2ps6weo)), or you can [install Docker](https://docs.docker.com/get-docker/).
 Once your server is setup, connect to its command prompt over SSH before proceeding. 
 
 ### Step 1 - Setup

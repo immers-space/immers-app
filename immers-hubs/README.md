@@ -58,7 +58,7 @@ Deploy your portal to the Immers Space metaverse and connect it to your Hubs Clo
 
 ### Step 0 - Server
 
-You'll need a server with at least 1GB RAM, 20GB storage, and Docker Compose installed. Your hosting provider might provide a ready-to-use image you can deploy ([Digital Ocean](https://marketplace.digitalocean.com/apps/docker), [AWS](https://aws.amazon.com/marketplace/pp/B08SHXDLL3?qid=1616591908920)), or you can [install Docker](https://docs.docker.com/get-docker/).
+You'll need a server with at least 1GB RAM, 20GB storage, and Docker Compose installed. Your hosting provider might provide a ready-to-use image you can deploy ([Digital Ocean](https://marketplace.digitalocean.com/apps/docker), [AWS](https://aws.amazon.com/marketplace/pp/prodview-vmbxxa2ps6weo)), or you can [install Docker](https://docs.docker.com/get-docker/).
 Your Immers Server does not need to be on the same hosting provider as your Hubs Cloud.
 Once your server is setup, point your main domain to the IP address of your new server (i.e. add a DNS "A" record, [Digital Ocean](https://docs.digitalocean.com/products/networking/dns/how-to/manage-records/), [AWS](https://docs.aws.amazon.com/Route53/latest/DeveloperGuide/routing-to-ec2-instance.html))
 and connect to its command prompt over SSH before proceeding.

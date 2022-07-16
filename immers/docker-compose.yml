@@ -21,7 +21,7 @@ services:
         max-size: '10m'
     
   mongodb:
-    image: mongo:4.2
+    image: mongo:4.4
     restart: unless-stopped
     volumes:
       - mongo-data:/data/db
