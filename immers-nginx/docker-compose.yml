@@ -19,7 +19,7 @@ services:
     environment:
       NODE_ENV: 'production'
       proxyMode: 1
-      dbString: mongodb://localhost:27017/immers
+      dbString: mongodb://mongodb:27017/immers
     depends_on:
       - mongodb
     volumes:
