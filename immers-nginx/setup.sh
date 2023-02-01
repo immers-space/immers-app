@@ -18,7 +18,7 @@ sed -Ei "s|(name=).*|\1$immerName|" ./.env
 read -p 'Base domain for your immer (e.g. immers.space): ' domain
 sed -Ei "s|(domain=).*|\1$domain|" ./.env
 # nginx reverse proxy config
-echo ALLOWED_DOMAINS=$domain >> .env.nignx
+echo ALLOWED_DOMAINS=$domain >> .env.nginx
 echo SITES=$domain=immer:8081 >> .env.nginx
 read -p 'Domain for your Immersive Web experience (e.g. hub.immers.space): ' hub
 sed -Ei "s|(hub=).*|\1$hub|" ./.env
