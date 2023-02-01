@@ -82,7 +82,7 @@ The first time you load, it will take longer as it sets up your security certifi
 With just one line of code, you can add a minimal HUD with Immers Login and profile status.
 
 ```html
-<script type="module" src="https://unpkg.com/immers-client/dist/destination.bundle.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/immers-client/dist/destination.bundle.js"></script>
 ```
 
 Check out the [immers-client](https://github.com/immers-space/immers-client) library for more options.
