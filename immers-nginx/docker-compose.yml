@@ -11,7 +11,7 @@ services:
       - ssl_data:/etc/resty-auto-ssl
     depends_on:
       - immer
-    env_file: '.env.nignx'
+    env_file: '.env.nginx'
   immer:
     image: immersspace/immers:latest
     restart: always
